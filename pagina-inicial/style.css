@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+.logo-container {
+    margin-bottom: 30px;
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+h1 {
+    color: #FF6F00; /* COR LARANJA PRINCIPAL */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px; /* Reduzido para dar espaço ao select */
+}
+
+/* Estilos para o Dropdown Personalizado */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Largura máxima do select */
+    margin: 20px auto; /* Centraliza */
+    font-size: 1.1em;
+}
+
+.select-selected {
+    background-color: #FF6F00; /* Laranja do botão */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Alinha o texto e o ícone */
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.select-selected:hover {
+    background-color: #E65C00; /* Laranja mais escuro ao passar o mouse */
+}
+
+.select-selected.select-arrow-active .arrow {
+    transform: rotate(180deg); /* Gira a seta para cima quando aberto */
+}
+
+.select-items {
+    position: absolute;
+    background-color: #f8f8f8; /* Fundo claro para os itens */
+    margin-top: 5px;
+    top: 100%; /* Abaixo do campo selecionado */
+    left: 0;
+    right: 0;
+    z-index: 99; /* Garante que fique por cima de outros elementos */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para garantir o border-radius */
+}
+
+.select-hide {
+    display: none; /* Esconde a lista por padrão */
+}
+
+.select-items div {
+    color: #333;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Linha fina entre itens */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.select-items div:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.select-items div:hover {
+    background-color: #FFEEE0; /* Laranja bem claro no hover do item */
+    color: #FF6F00; /* Cor do texto laranja no hover */
+}
+
+.arrow {
+    transition: transform 0.3s ease; /* Transição suave para a seta */
+}
+
+/* Ajustes responsivos */
+@media (min-width: 600px) {
+    /* Sem necessidade de grid columns para o select, mas pode ajustar a largura máxima */
+}
